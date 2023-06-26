@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-image: linear-gradient(to right, transparent 100px, #ff0c0c 100px, #ff0c0c 102px, transparent 102px), linear-gradient(to bottom, white 100px, transparent 100px), repeating-linear-gradient(to bottom, white, white 20px, #1c2cff 20px, #1c2cff 21px);
+            position: relative;
+            margin: 0;
+        }
+
+        .punch-hole {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: #e2e2e2;
+            left: 35px;
+            top: 105px;
+            border: 1px solid black;
+            border-radius: 50%;
+            box-shadow: 1px 1px 2px inset #00000099;
+        }
+
+        .punch-hole:nth-child(2) {
+            top: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="punch-hole"></div>
+    <div class="punch-hole"></div>
+</body>
+</html>

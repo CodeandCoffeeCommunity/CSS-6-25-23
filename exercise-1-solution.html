@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+        }
+
+        h1 {
+            position: relative;
+            width: max-content;
+        }
+
+        h1::after {
+            position: absolute;
+            top: 0;
+            left: calc(100% + .5em);
+            height: 100%;
+            width: 2em;
+            content: "";
+            background-image: url(data:image/png;base64,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);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        #wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: .5em;
+        }
+
+        li {
+            box-shadow: 1px 2px 4px #555;
+            padding: .75em 1em;
+            position: relative;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            overflow: hidden;
+            --indicatorColor: green;
+        }
+
+        .damaged {
+            --indicatorColor: #fefe22;
+        }
+
+        .inoperable {
+            --indicatorColor: red;
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            flex-flow: column;
+            gap: .5em;
+        }
+
+        li::after {
+            position: absolute;
+            background: #0000cd;
+            width: 1.5em;
+            height: 100%;
+            right: 0;
+            top: 0;
+            content: "";
+        }
+
+        li::before {
+            background-color: var(--indicatorColor);
+            background-image: linear-gradient(to bottom right, #ffffff55, #00000055);
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            content: "";
+            margin-right: .5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>USS Enterprise - System Diagnostic</h1>
+    <div id="wrapper">
+        <div class="category">
+            <h2>Tactical</h2>
+            <ul>
+                <li>Shields</li>
+                <li class="damaged">Phasers</li>
+                <li class="inoperable">Photon Torpedoes</li>
+            </uL>
+        </div>
+        <div class="category">
+            <h2>Engineering</h2>
+            <ul>
+                <li class="damaged">Warp Drive</li>
+                <li>Life Support</li>
+                <li class="damaged">Turbolifts</li>
+            </uL>
+        </div>
+        <div class="category">
+            <h2>Operations</h2>
+            <ul>
+                <li class="inoperable">Holodeck</li>
+                <li class="inoperable">Transporters</li>
+                <li>Hydroponics</li>
+            </uL>
+        </div>
+    </div>
+
+</body>
+</html>
